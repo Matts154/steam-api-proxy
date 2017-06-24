@@ -4,6 +4,6 @@
 		"request": "^2.81.0"
 	},
 	"scripts": {
-		"start": "node proxy.js",
+		"start": "node proxy.js"
 	}
 }

@@ -15,13 +15,7 @@ app.use('/', function(req, res) {
 	var host = "http://api.steampowered.com"
 	var url = host + req.url + "&key=" + process.env.APIKEY;
 
-	if (req.hostname === process.env.HOST) {
-		req.pipe(request(url)).pipe(res);
-	}
-	else {
-		res.status(403).end();
-	}
-
+	req.pipe(request(url)).pipe(res);
 });
 
 app.listen(process.env.PORT || 8080);
